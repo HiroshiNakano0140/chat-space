@@ -17,30 +17,31 @@
 |------|----|-------|
 |name|string|null: false|
 |email|string|null: false, unique: true|
-|password|intger|null: false|
+|password|string|null: false|
 
 ## Association
-- has many:groups
+- has many:groups, through: :groups_users
+- belongs_to:groups_users
 - has_many:messages
 
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
-|name|string|
-|time|intger|
+|text|text|
+|image|string|
 
 ## Association
-- belongs_to:user
-- belongs_to:group
+- belongs_to:user_id
+- belongs_to:group_id
 
 ## groupsテーブル
 
 Column|Type|Options|
 |------|----|-------|
-|member|string|
+|name|string|
 
 ## Association
-- has_many:users
+- has_many:users, through: :groups_users
+- belongs_to:groups_users
 - has_many:masseges
