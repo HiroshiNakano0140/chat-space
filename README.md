@@ -1,3 +1,5 @@
+# DB設計
+
 ##groups_userテーブル
 
 |Column|Type|Options|
@@ -9,7 +11,7 @@
 - belongs_to:group
 - belongs_to:user
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -18,17 +20,27 @@
 |password|intger|null: false|
 
 ## Association
-- has many:group
-- has_many:chat
+- has many:groups
+- has_many:messages
 
-## chatテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|message|text|null: false|
 |name|string|
 |time|intger|
 
 ## Association
 - belongs_to:user
 - belongs_to:group
+
+## groupsテーブル
+
+Column|Type|Options|
+|------|----|-------|
+|member|string|
+
+## Association
+- has_many:users
+- has_many:masseges
