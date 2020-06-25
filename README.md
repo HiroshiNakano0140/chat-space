@@ -1,4 +1,4 @@
-# groups_userテーブル
+##groups_userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -9,7 +9,7 @@
 - belongs_to:group
 - belongs_to:user
 
-### userテーブル
+## userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -17,11 +17,11 @@
 |email|string|null: false, unique: true|
 |password|intger|null: false|
 
-#### Association
+## Association
 - has many:group
 - has_many:chat
 
-##### chatテーブル
+## chatテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -29,6 +29,6 @@
 |name|string|
 |time|intger|
 
-###### Association
+## Association
 - belongs_to:user
 - belongs_to:group
