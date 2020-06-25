@@ -33,3 +33,19 @@ Things you may want to cover:
 ### Association
 - belongs_to:group
 - belongs_to:user
+
+#### userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+|password|intger|null: false|
+
+##### chatテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|name|string|
+|time|intger|
