@@ -30,8 +30,8 @@
 |------|----|-------|
 |text|text|
 |image|string|
-|user_id|integer|null:false|
-|groups_id|integer|null:false|
+|user_id|integer|null:false, foreign_key: true|
+|groups_id|integer|null:false, foreign_key: true|
 
 ## Association
 - belongs_to:user
