@@ -21,7 +21,7 @@
 
 ## Association
 - has many:groups, through: :groups_users
-- belongs_to:groups_users
+- has_many:groups_users
 - has_many:messages
 
 ## messagesテーブル
@@ -30,18 +30,20 @@
 |------|----|-------|
 |text|text|
 |image|string|
+|user_id|integer|null:false|
+|groups_id|integer|null:false|
 
 ## Association
-- belongs_to:user_id
-- belongs_to:group_id
+- belongs_to:user
+- belongs_to:group
 
 ## groupsテーブル
 
 Column|Type|Options|
 |------|----|-------|
-|name|string|
+|name|string|null:false|
 
 ## Association
 - has_many:users, through: :groups_users
-- belongs_to:groups_users
+- has_many:groups_users
 - has_many:masseges
