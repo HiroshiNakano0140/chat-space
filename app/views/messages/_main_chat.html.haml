@@ -1,1 +1,39 @@
-<チャット画面>
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__group-name
+      test
+      %ul.chat-main__group-info__group-name__member
+        Member : 
+        %li.chat-main__group-info__group-name__member__name
+        name
+    .chat-main__group-info__edit-tag
+      = link_to "Edit", '#'
+  .chat-main__message-list
+    .chat-main__message-list__box
+      .chat-main__message-list__box__name
+        hiro
+      .chat-main__message-list__box__date
+        日付
+    .chat-main__message-list__message
+      投稿内容
+    .chat-main__message-list__box
+      .chat-main__message-list__box__name
+        hiro
+      .chat-main__message-list__box__date
+        日付
+    .chat-main__message-list__message
+      投稿内容
+    .chat-main__message-list__box
+      .chat-main__message-list__box__name
+        hiro
+      .chat-main__message-list__box__date
+        日付
+    .chat-main__message-list__message
+      投稿内容
+  .chat-main__message-form
+    .chat-main__message-form__inputbox
+      %input{type: "text", class: "chat-main__message-form__inputbox__text", placeholder: "type a message"}
+      %label{class: "chat-main__message-form__inputbox__photo-btn"}
+        = icon('fas', 'image')
+        %input{type: "file", class: "chat-main__message-form__inputbox__photo-btn__file" }
+    %input{type: "submit",value: "Send", class: "chat-main__message-form__send-btn"}
