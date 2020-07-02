@@ -2,11 +2,11 @@
   .side-bar__user
     .side-bar__user__menu
       .side-bar__user__menu__user-name
-        hiro
+        = current_user.name
       .side-bar__user__menu__user-icon
-        =link_to "#", class: "user-edit__btn" do
+        = link_to "#", class: "user-edit__btn" do
           = icon('far', 'edit', class: 'side-bar__user__menu__user-icon__edit-btn')
-        =link_to "#", class: "user-cog__btn" do
+        = link_to edit_user_path(current_user), class: "user-cog__btn" do
           = icon('fas', 'cog', class: 'side-bar__user__menu__user-icon__cog-btn')
   .side-bar__group-list
     .side-bar__group-list__group
