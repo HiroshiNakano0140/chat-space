@@ -1,5 +1,6 @@
 # DB設計
 
+<<<<<<< Updated upstream
 ##groups_userテーブル
 
 |Column|Type|Options|
@@ -47,3 +48,6 @@ Column|Type|Options|
 - has_many:users, through: :groups_users
 - has_many:groups_users
 - has_many:masseges
+=======
+
+>>>>>>> Stashed changes
